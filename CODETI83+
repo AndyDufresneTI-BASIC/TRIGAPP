@@ -1,0 +1,73 @@
+:StoreGCB 0
+:GridOFF
+:PlotsOFF
+:AxesOFF
+:1→Xmin:1→ΔX
+:1→Ymin:1→ΔY
+:0:Disp
+:
+:Lbl 1
+:1→X
+:ClrDraw
+:"MAIN MENU"→Str1
+:"MODE SELECT"→Str2
+:""→Str3
+:""→Str4
+:"QUIT"→Str0
+:Menu(Str1,Str2,2,Str3,3,Str4,4,Str0,0)
+:
+:Lbl 0
+:RecallGDB 0
+:Delvar GDB0
+:Delvar Str1
+:Delvar Str2
+:Delvar Str3
+:Delvar Str4
+:Delvar Str0
+:Delvar X
+:0:Stop
+:
+:Lbl 2
+:1→X
+:ClrDraw
+:"MODE SELECT"→Str1
+:"RADIANS"→Str2
+:"DEGREES (.)"→Str3
+:"DEGS MINS SECS"→Str4
+:"EXIT"→Str0
+::Menu(Str1,Str2,22,Str3,3,Str4,4,Str0,1)
+:
+:Lbl 3
+:1→X
+:ClrDraw
+:Pause
+:Goto 1
+:
+:Lbl 4
+:1→X
+:ClrDraw
+:Pause
+:Goto 1
+:
+:
+:Lbl 22
+:1→X
+:ClrDraw
+:Radian
+:Pause
+:Goto 2
+:
+:Lbl 23
+:1→X
+:ClrDraw
+:Degree
+:Pause
+:Goto 2
+:
+:Lbl 24
+:1→X
+:ClrDraw
+:Degree
+:Pause
+:Goto 2
+:
