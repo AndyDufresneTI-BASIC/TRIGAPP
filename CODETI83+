@@ -5,6 +5,7 @@
 :1→Xmin:1→ΔX
 :1→Ymin:1→ΔY
 :0:Disp
+:Goto 2
 :
 :Lbl 1
 :1→X
