@@ -35,7 +35,7 @@
 :"DEGREES (.)"→Str3
 :"DEGS MINS SECS"→Str4
 :"EXIT"→Str0
-::Menu(Str1,Str2,22,Str3,3,Str4,4,Str0,1)
+::Menu(Str1,Str2,22,Str3,23,Str4,24,Str0,1)
 :
 :Lbl 3
 :1→X
