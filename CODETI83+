@@ -6,6 +6,7 @@
 :1→Xmin:1→ΔX
 :1→Ymin:1→ΔY
 :0:Disp
+:ClrHome
 :Goto 5
 :
 :Lbl 1
@@ -35,7 +36,6 @@
 :
 :
 :Lbl 2
-:ClrDraw
 :"FUNCTIONS"→Str1
 :""→Str2
 :""→Str3
@@ -62,7 +62,6 @@
 :
 :
 :Lbl 3
-:ClrDraw
 :"TRIANGLES"→Str1
 :"LAW OF SINES"→Str2
 :"LAW OF COSINES"→Str3
@@ -89,7 +88,6 @@
 :
 :
 :Lbl 4
-:ClrDraw
 :"VECTORS"→Str1
 :"MAGNITUDE"→Str2
 :"DIRECTION"→Str3
@@ -99,16 +97,16 @@
 :
 :Lbl 42
 :ClrDraw
+:Disp "----------------"
 :Disp "VECTOR: <X,Y>"
 :Input "X = ",A
 :Input "Y = ",B
-:Disp "----------------"
 :Text(-1,0,0,Str2,": ",√(A²+B²))
 :Pause
 :ClrDraw
 :Text(0,0,"VECTOR: <",A,",",B,">")
 :Text(7,5,"√(X²+Y²)")
-:Text(14,5,"√(",A,"²+",B,"²)")
+:Text(14,5,"√((",A,")²+(",B,")²)")
 :Text(21,5,"√(",A²,"+",B²,")",)
 :Text(28,5,"√(",A²+B²,")")
 :Text(35,0,Str2,": ",√(A²+B²))
@@ -129,7 +127,6 @@
 :
 :
 :Lbl 5
-:ClrDraw
 :"MODE SELECT"→Str1
 :"RADIANS"→Str2
 :"DEGREES (.)"→Str3
@@ -137,20 +134,20 @@
 :Menu(Str1,Str2,52,Str3,53,Str4,54)
 :
 :Lbl 52
-:ClrDraw
 :Radian
+:Disp "Radian MODE"
 :Pause
-:Goto 5
+:Goto 1
 :
 :Lbl 53
-:ClrDraw
 :Degree
+:Disp "Degree MODE"
 :Pause
-:Goto 5
+:Goto 1
 :
 :Lbl 54
-:ClrDraw
 :Degree
+:Disp "Degree MODE"
 :Pause
-:Goto 5
+:Goto 1
 :
