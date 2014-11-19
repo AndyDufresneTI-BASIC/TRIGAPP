@@ -1,21 +1,22 @@
-:StoreGCB 0
+:StoreGDB 0
 :GridOFF
 :PlotsOFF
 :AxesOFF
+:FnOFF
 :1→Xmin:1→ΔX
 :1→Ymin:1→ΔY
 :0:Disp
-:Goto 2
+:Goto 5
 :
 :Lbl 1
-:1→X
 :ClrDraw
 :"MAIN MENU"→Str1
-:"MODE SELECT"→Str2
-:""→Str3
-:""→Str4
+:"FUNCTIONS"→Str2
+:"TRIANGLES"→Str3
+:"VECTORS"→Str4
+:"MODE SELECT"→Str5
 :"QUIT"→Str0
-:Menu(Str1,Str2,2,Str3,3,Str4,4,Str0,0)
+:Menu(Str1,Str2,2,Str3,3,Str4,4,Str5,5,Str0,0)
 :
 :Lbl 0
 :RecallGDB 0
@@ -24,51 +25,132 @@
 :Delvar Str2
 :Delvar Str3
 :Delvar Str4
+:Delvar Str5
 :Delvar Str0
-:Delvar X
+:Delvar A
+:Delvar B
 :0:Stop
 :
+:
+:
+:
 :Lbl 2
-:1→X
+:ClrDraw
+:"FUNCTIONS"→Str1
+:""→Str2
+:""→Str3
+:""→Str4
+:"EXIT"→Str0
+:Menu(Str1,Str2,22,Str3,23,Str4,24,Str0,1)
+:
+:Lbl 22
+:ClrDraw
+:Pause
+:Goto 2
+:
+:Lbl 23
+:ClrDraw
+:Pause
+:Goto 2
+:
+:Lbl 24
+:ClrDraw
+:Pause
+:Goto 2
+:
+:
+:
+:
+:Lbl 3
+:ClrDraw
+:"TRIANGLES"→Str1
+:"LAW OF SINES"→Str2
+:"LAW OF COSINES"→Str3
+:""→Str4
+:"EXIT"→Str0
+:Menu(Str1,Str2,32,Str3,33,Str4,34,Str0,1)
+:
+:Lbl 32
+:ClrDraw
+:Pause
+:Goto 3
+:
+:Lbl 33
+:ClrDraw
+:Pause
+:Goto 3
+:
+:Lbl 34
+:ClrDraw
+:Pause
+:Goto 3
+:
+:
+:
+:
+:Lbl 4
+:ClrDraw
+:"VECTORS"→Str1
+:"MAGNITUDE"→Str2
+:"DIRECTION"→Str3
+:""→Str4
+:"EXIT"→Str0
+:Menu(Str1,Str2,42,Str3,43,Str4,44,Str0,1)
+:
+:Lbl 42
+:ClrDraw
+:Disp "VECTOR: <X,Y>"
+:Input "X = ",A
+:Input "Y = ",B
+:Disp "----------------"
+:Text(-1,0,0,Str2,": ",√(A²+B²))
+:Pause
+:ClrDraw
+:Text(0,0,"VECTOR: <",A,",",B,">")
+:Text(7,5,"√(X²+Y²)")
+:Text(14,5,"√(",A,"²+",B,"²)")
+:Text(21,5,"√(",A²,"+",B²,")",)
+:Text(28,5,"√(",A²+B²,")")
+:Text(35,0,Str2,": ",√(A²+B²))
+:Pause
+:Goto 4
+:
+:Lbl 43
+:ClrDraw
+:Pause
+:Goto 4
+:
+:Lbl 44
+:ClrDraw
+:Pause
+:Goto 4
+:
+:
+:
+:
+:Lbl 5
 :ClrDraw
 :"MODE SELECT"→Str1
 :"RADIANS"→Str2
 :"DEGREES (.)"→Str3
 :"DEGS MINS SECS"→Str4
-:"EXIT"→Str0
-::Menu(Str1,Str2,22,Str3,23,Str4,24,Str0,1)
+:Menu(Str1,Str2,52,Str3,53,Str4,54)
 :
-:Lbl 3
-:1→X
-:ClrDraw
-:Pause
-:Goto 1
-:
-:Lbl 4
-:1→X
-:ClrDraw
-:Pause
-:Goto 1
-:
-:
-:Lbl 22
-:1→X
+:Lbl 52
 :ClrDraw
 :Radian
 :Pause
-:Goto 2
+:Goto 5
 :
-:Lbl 23
-:1→X
+:Lbl 53
 :ClrDraw
 :Degree
 :Pause
-:Goto 2
+:Goto 5
 :
-:Lbl 24
-:1→X
+:Lbl 54
 :ClrDraw
 :Degree
 :Pause
-:Goto 2
+:Goto 5
 :
