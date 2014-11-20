@@ -65,7 +65,7 @@
 :"TRIANGLES"→Str1
 :"LAW OF SINES"→Str2
 :"LAW OF COSINES"→Str3
-:""→Str4
+:"SOLVE"→Str4
 :"EXIT"→Str0
 :Menu(Str1,Str2,32,Str3,33,Str4,34,Str0,1)
 :
@@ -81,6 +81,41 @@
 :
 :Lbl 34
 :ClrDraw
+:Disp "----------------"
+:Disp "ENTER 3 VALUES:"
+:Disp "PUT 0 IF UNKNOWN"
+:Input "ANGLE A = ",A
+:Input "ANGLE B = ",B
+:Input "ANGLE C = ",C
+:Input "SIDE A = ",D
+:Input "SIDE B = ",E
+:Input "SIDE C = ",F
+:IF A=0 and B=0 and C=0 and D<>0 and E<>0 and F<>0 THEN
+  :cos⁻¹((E²+F²-D²)/(2*E*F))→A
+  :cos⁻¹((D²+F²-E²)/(2*D*F))→B
+  :cos⁻¹((D²+E²-F²)/(2*D*E))→C
+  :Text(-1,0,0,"SSS (LAW OF"
+  :Text(-1,0,8,"COSINES):"
+  :Text(-1,0,16,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F))
+  :Text(-1,0,24,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F))
+  :Text(-1,0,32,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E))
+:ENDIF
+
+
+
+
+
+:Pause
+:ClrDraw
+
+
+
+:Text(0,0,"VECTOR: <",A,",",B,">")
+:Text(7,5,"√(X²+Y²)")
+:Text(14,5,"√((",A,")²+(",B,")²)")
+:Text(21,5,"√(",A²,"+",B²,")",)
+:Text(28,5,"√(",A²+B²,")")
+:Text(35,0,Str2,": ",√(A²+B²))
 :Pause
 :Goto 3
 :
