@@ -91,9 +91,9 @@
 :Input "ANGLE A = ",A
 :Input "ANGLE B = ",B
 :Input "ANGLE C = ",C
-:Input "SIDE A = ",D
-:Input "SIDE B = ",E
-:Input "SIDE C = ",F
+:Input "SIDE a = ",D
+:Input "SIDE b = ",E
+:Input "SIDE c = ",F
 :"MODE SELECT"→Str1
 :"RADIANS"→Str2
 :"DEGREES (.)"→Str3
@@ -104,11 +104,11 @@
 :Radian
 :Disp "Radian MODE"
 :Pause
-:If A=0 and B=0 and C=0 and D<>0 and E<>0 and F<>0 
+:If A=0 and B=0 and C=0 and D and E and F 
   :Then
-  :Text(-1,0,0,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F)))
-  :Text(-1,8,0,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F)))
-  :Text(-1,16,0,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E)))
+  :Text(-1,0,0,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F)),"ʳ")
+  :Text(-1,8,0,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F)),"ʳ")
+  :Text(-1,16,0,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E)),"ʳ")
 :End
 :Pause
 :Goto 3
@@ -117,12 +117,12 @@
 :Degree
 :Disp "Degree MODE"
 :Pause
-:IF A=0 and B=0 and C=0 and D<>0 and E<>0 and F<>0 
-  :THEN
-  :Text(-1,0,0,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F),"°")
-  :Text(-1,0,8,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F),"°")
-  :Text(-1,0,16,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E),"°")
-:ENDIF
+:If A=0 and B=0 and C=0 and D and E and F 
+  :Then
+  :Text(-1,0,0,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F)),"°")
+  :Text(-1,8,0,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F)),"°")
+  :Text(-1,16,0,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E)),"°")
+:End
 :Pause
 :Goto 3
 :
@@ -130,19 +130,19 @@
 :Degree
 :Disp "Degree MODE"
 :Pause
-:IF A=0 and B=0 and C=0 and D<>0 and E<>0 and F<>0 
-  :THEN
+:If A=0 and B=0 and C=0 and D and E and F 
+  :Then
   :Text(-1,0,0,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F))►DMS
   :Text(-1,8,0,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F))►DMS
   :Text(-1,16,0,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E))►DMS
-:ENDIF
+:End
 :Pause
 :ClrDraw
 :Text(0,0,"SIDE A: ",D
 :Text(7,0,"SIDE B: ",E
 :Text(14,0,"SIDE C: ",F
-:Text(21,0,"SSS: 1 SOLUTION USING"
-:Text(28,0,"THE ///LAW OF COSINES:"
+:Text(21,0,"SSS: 1 SOLUTION"
+:Text(28,0,"LAW OF COSINES:"
 :Goto 3
 :
 :Text(35,5,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F))►DMS
