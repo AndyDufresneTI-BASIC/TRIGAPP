@@ -104,12 +104,12 @@
 :Radian
 :Disp "Radian MODE"
 :Pause
-:IF A=0 and B=0 and C=0 and D<>0 and E<>0 and F<>0 
-  :THEN
-  :Text(-1,0,0,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F))
-  :Text(-1,0,8,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F))
-  :Text(-1,0,16,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E))
-:ENDIF
+:If A=0 and B=0 and C=0 and D<>0 and E<>0 and F<>0 
+  :Then
+  :Text(-1,0,0,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F)))
+  :Text(-1,8,0,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F)))
+  :Text(-1,16,0,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E)))
+:End
 :Pause
 :Goto 3
 :
@@ -141,13 +141,11 @@
 :Text(0,0,"SIDE A: ",D
 :Text(7,0,"SIDE B: ",E
 :Text(14,0,"SIDE C: ",F
-:Text(21,0,"SSS: 1 SOLUTION"
-:Text(28,0,"LAW OF COSINES:"
-:Text(35,5,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F))►DMS
-:Text(42,5,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F))►DMS
-:Text(49,5,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E))►DMS
+:Text(21,0,"SSS: 1 SOLUTION USING"
+:Text(28,0,"THE ///LAW OF COSINES:"
 :Goto 3
 :
+:Text(35,5,"ANGLE A: ",cos⁻¹((E²+F²-D²)/(2*E*F))►DMS
 :Text(0,0,"ANGLE A: <",A,",",B,">")
 :Text(7,5,"√(X²+Y²)")
 :Text(14,5,"√((",A,")²+(",B,")²)")
@@ -156,6 +154,7 @@
 :Text(35,0,Str2,": ",√(A²+B²))
 :Pause
 :ClrDraw
+:Text(42,5,"ANGLE B: ",cos⁻¹((D²+F²-E²)/(2*D*F))►DMS
 :Text(0,0,"ANGLE B: <",A,",",B,">")
 :Text(7,5,"√(X²+Y²)")
 :Text(14,5,"√((",A,")²+(",B,")²)")
@@ -164,6 +163,7 @@
 :Text(35,0,Str2,": ",√(A²+B²))
 :Pause
 :ClrDraw
+:Text(49,5,"ANGLE C: ",cos⁻¹((D²+E²-F²)/(2*D*E))►DMS
 :Text(0,0,"ANGLE C: <",A,",",B,">")
 :Text(7,5,"√(X²+Y²)")
 :Text(14,5,"√((",A,")²+(",B,")²)")
