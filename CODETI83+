@@ -206,7 +206,74 @@
 :
 :Lbl 43
 :ClrDraw
-:Pause
+:Disp "----------------"
+:Disp "VECTOR: <X,Y>"
+:Input "X = ",A
+:Input "Y = ",B
+:If A>0 and B>0
+  :Then
+  :Text(-1,0,0,Str3,": ",tan⁻¹(B/A))
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,"> (QI)")
+  :Text(7,5,"tan(θ) = Y/X")
+  :Text(14,5,"tan(θ) = (",B,")/(",A,")")
+  :Text(21,5,"θ = tan⁻¹(",B,"/",A,")")
+  :Text(28,5,"θ = tan⁻¹(B/A))
+  :Text(35,5,"θ + 0° in QI: ",tan⁻¹(B/A))
+  :Text(42,0,Str3,": ",tan⁻¹(B/A))
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
+:If A<0 and B>0
+  :Then
+  :Text(-1,0,0,Str3,": ",tan⁻¹(B/A)+180)
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,"> (QII)")
+  :Text(7,5,"tan(θ) = Y/X")
+  :Text(14,5,"tan(θ) = (",B,")/(",A,")")
+  :Text(21,5,"θ = tan⁻¹(",B,"/",A,")")
+  :Text(28,5,"θ = tan⁻¹(B/A))
+  :Text(35,5,"θ + 180° in QII: ",tan⁻¹(B/A)+180)
+  :Text(42,0,Str3,": ",tan⁻¹(B/A)+180)
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
+:If A<0 and B<0
+  :Then
+  :Text(-1,0,0,Str3,": ",tan⁻¹(B/A)+180)
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,"> (QIII)")
+  :Text(7,5,"tan(θ) = Y/X")
+  :Text(14,5,"tan(θ) = (",B,")/(",A,")")
+  :Text(21,5,"θ = tan⁻¹(",B,"/",A,")")
+  :Text(28,5,"θ = tan⁻¹(B/A))
+  :Text(35,5,"θ + 180° in QIII: ",tan⁻¹(B/A)+180)
+  :Text(42,0,Str3,": ",tan⁻¹(B/A)+180)
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
+:If A>0 and B<0
+  :Then
+  :Text(-1,0,0,Str3,": ",tan⁻¹(B/A)+360)
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,"> (QIV)")
+  :Text(7,5,"tan(θ) = Y/X")
+  :Text(14,5,"tan(θ) = (",B,")/(",A,")")
+  :Text(21,5,"θ = tan⁻¹(",B,"/",A,")")
+  :Text(28,5,"θ = tan⁻¹(B/A))
+  :Text(35,5,"θ + 360° in QIV: ",tan⁻¹(B/A)+360)
+  :Text(42,0,Str3,": ",tan⁻¹(B/A)+360)
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
 :Goto 4
 :
 :Lbl 44
