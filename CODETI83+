@@ -274,6 +274,58 @@
   :Delvar A
   :Delvar B
 :End
+:If A>0 and B=0
+  :Then
+  :Text(-1,0,0,Str3,": ",0)
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,">")
+  :Text(7,5,"IF X = (+) & Y = 0")
+  :Text(14,5,"THEN θ = 0°")
+  :Text(21,0,Str3,": ",0)
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
+:If A=0 and B>0
+  :Then
+  :Text(-1,0,0,Str3,": ",90)
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,">")
+  :Text(7,5,"IF X = 0 & Y = (+)")
+  :Text(14,5,"THEN θ = 90°")
+  :Text(21,0,Str3,": ",90)
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
+:If A<0 and B=0
+  :Then
+  :Text(-1,0,0,Str3,": ",180)
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,">")
+  :Text(7,5,"IF X = (-) & Y = 0")
+  :Text(14,5,"THEN θ = 180°")
+  :Text(21,0,Str3,": ",180)
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
+:If A=0 and B<0
+  :Then
+  :Text(-1,0,0,Str3,": ",270)
+  :Pause
+  :ClrDraw
+  :Text(0,0,"VECTOR: <",A,",",B,">")
+  :Text(7,5,"IF X = 0 & Y = (-)")
+  :Text(14,5,"THEN θ = 270°")
+  :Text(21,0,Str3,": ",270)
+  :Pause
+  :Delvar A
+  :Delvar B
+:End
 :Goto 4
 :
 :Lbl 44
