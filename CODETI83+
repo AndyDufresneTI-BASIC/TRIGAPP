@@ -1,40 +1,40 @@
-:StoreGDB 0
-:GridOFF
-:PlotsOFF
-:AxesOFF
-:FnOFF
-:1→Xmin:1→ΔX
-:1→Ymin:1→ΔY
-:0:Disp
-:ClrHome
-:Goto 5
+:StoreGDB 0 // Save graph and window format settings in variable GDB 0
+:PlotsOFF // Turn off all three stat plots
+:FnOFF // Turn off all ten functions
+:GridOFF // Turn off graphscreen grid
+:AxesOFF // Turn off graphscreen X and Y axes
+:1→Xmin:1→ΔX // Set graphscreen horizonatal pixel coordinate to start at 1, end at 95, and increment by 1 (left to right)
+:1→Ymin:1→ΔY // Set graphscreen vertical pixel coordinate to start at 1, end at 63, and increment by 1 (top to bottom)
+:0:Disp // Clear system variable Ans and display a blank line
+:ClrHome // Clear homescreen
+:Goto 5 // Goto MODE SELECT menu <-- force user to check pertinent calculator settings
 :
 :Lbl 1
-:ClrDraw
-:"MAIN MENU"→Str1
-:"FUNCTIONS"→Str2
-:"TRIANGLES"→Str3
-:"VECTORS"→Str4
-:"MODE SELECT"→Str5
-:"QUIT"→Str0
-:Menu(Str1,Str2,2,Str3,3,Str4,4,Str5,5,Str0,0)
+:ClrDraw // Clear the graphscreen
+:"MAIN"→Str1 // Store menu title "MAIN" in variable Str1
+:"FUNCTIONS"→Str2 // Store menu option "FUNCTIONS" in variable Str2
+:"TRIANGLES"→Str3 // Store menu option "TRIANGLES" in variable Str3
+:"VECTORS"→Str4 // Store menu option "VECTORS" in variable Str4
+:"MODE SELECT"→Str5 // Store menu option "MODE SELECT" in variable Str5
+:"QUIT"→Str0 // Store menu option "QUIT" in variable Str0
+:Menu(Str1,Str2,2,Str3,3,Str4,4,Str5,5,Str0,0) // Display MAIN menu
 :
 :Lbl 0
-:RecallGDB 0
-:Delvar GDB0
-:Delvar Str1
-:Delvar Str2
-:Delvar Str3
-:Delvar Str4
-:Delvar Str5
-:Delvar Str0
-:Delvar A
-:Delvar B
-:Delvar C
-:Delvar D
-:Delvar E
-:Delvar F
-:0:Stop
+:RecallGDB 0 // Restore graph and window format settings from variable GDB 0
+:Delvar GDB0 // Zeroize variable GDB 0
+:Delvar Str1 // Zeroize variable Str1
+:Delvar Str2 // Zeroize variable Str2
+:Delvar Str3 // Zeroize variable Str3
+:Delvar Str4 // Zeroize variable Str4
+:Delvar Str5 // Zeroize variable Str5
+:Delvar Str0 // Zeroize variable Str0
+:Delvar A // Zeroize variable A
+:Delvar B // Zeroize variable B
+:Delvar C // Zeroize variable C
+:Delvar D // Zeroize variable D
+:Delvar E // Zeroize variable E
+:Delvar F // Zeroize variable F
+:0:Stop // Zeroize variable Ans and halt program execution
 :
 :
 :
@@ -347,17 +347,17 @@
 :Radian
 :Disp "Radian MODE"
 :Pause
-:Goto 1
+:Goto 1 // Goto MAIN menu
 :
 :Lbl 53
 :Degree
 :Disp "Degree MODE"
 :Pause
-:Goto 1
+:Goto 1 // Goto MAIN menu
 :
 :Lbl 54
 :Degree
 :Disp "Degree MODE"
-:Pause
-:Goto 1
+:Pause // Wait for user to press ENTER key
+:Goto 1 // Goto MAIN menu
 :
