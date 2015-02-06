@@ -40,12 +40,12 @@
 :
 :
 :Lbl 2
-:"FUNCTIONS"→Str1
+:"FUNCTIONS"→Str1 // Store menu title "FUNCTIONS" in variable Str1
 :""→Str2
 :""→Str3
 :""→Str4
-:"EXIT"→Str0
-:Menu(Str1,Str2,22,Str3,23,Str4,24,Str0,1)
+:"EXIT"→Str0 // Store menu option "EXIT" in variable Str0
+:Menu(Str1,Str2,22,Str3,23,Str4,24,Str0,1) // Display FUNCTIONS menu
 :
 :Lbl 22
 :ClrDraw
@@ -70,7 +70,7 @@
 :"LAW OF SINES"→Str2
 :"LAW OF COSINES"→Str3
 :"SOLVE"→Str4
-:"EXIT"→Str0
+:"EXIT"→Str0 // Store menu option "EXIT" in variable Str0
 :Menu(Str1,Str2,32,Str3,33,Str4,34,Str0,1)
 :
 :Lbl 32
@@ -337,22 +337,22 @@
 :
 :
 :Lbl 5
-:"MODE SELECT"→Str1
-:"RADIANS"→Str2
-:"DEGREES (.)"→Str3
-:"DEGS MINS SECS"→Str4
-:Menu(Str1,Str2,52,Str3,53,Str4,54)
+:"MODE SELECT"→Str1 // Store menu title "MODE SELECT" in variable Str1
+:"RADIANS"→Str2 // Store menu option "RADIANS" in variable Str2
+:"DEGREES (.)"→Str3 // Store menu option "DEGREES (.)" in variable Str3
+:"DEGS MINS SECS"→Str4 // Store menu option "DEGS MINS SECS" in variable Str4
+:Menu(Str1,Str2,52,Str3,53,Str4,54) // Display MODE SELECT menu
 :
 :Lbl 52
 :Radian
 :Disp "Radian MODE"
-:Pause
+:Pause // Wait for user to press ENTER key
 :Goto 1 // Goto MAIN menu
 :
 :Lbl 53
 :Degree
 :Disp "Degree MODE"
-:Pause
+:Pause // Wait for user to press ENTER key
 :Goto 1 // Goto MAIN menu
 :
 :Lbl 54
